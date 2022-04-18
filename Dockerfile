@@ -6,6 +6,10 @@ WORKDIR /usr/src/app
 COPY requirements.txt ./
 # Instalando os requerimentos com o PIP
 RUN pip install --no-cache-dir -r requirements.txt
+# Defininfo variáveis de ambiente
+ENV DJANGO_SUPERUSER_USERNAME = "alura"
+ENV DJANGO_SUPERUSER_PASSWORD = "mestre123"
+ENV DJANGO_SUPERUSER_EMAIL = "alura@alura.com"
 # Expondo a porta da APP
 EXPOSE 8000
 # Executando o comando para subir a aplicacao
